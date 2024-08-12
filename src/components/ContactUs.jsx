@@ -22,9 +22,9 @@ const ContactUs = () => {
     e.preventDefault();
 
     try {
-      const serviceID = 'YOUR_SERVICE_ID';
-      const templateID = 'YOUR_TEMPLATE_ID';
-      const userID = 'YOUR_USER_ID';
+      const serviceID = 'service_uqjhk7r';
+      const templateID = 'template_raafp6e';
+      const userID = 'tK6Kx7RVV2EU1gaEE';
 
       const templateParams = {
         name: formData.name,
@@ -34,7 +34,7 @@ const ContactUs = () => {
 
       await emailjs.send(serviceID, templateID, templateParams, userID);
       setStatus("SUCCESS");
-      setFormData({ name: "", email: "", message: "" }); // Clear form after success
+      setFormData({ name: "", email: "", message: "" }); 
     } catch (error) {
       console.error("Failed to send email. Error:", error);
       setStatus("FAILED");
